@@ -1,0 +1,14 @@
+security:
+  oauth2:
+    client:
+      client-id: ${vcap.services.uaa.credentials.client_id}
+      client-secret: ${vcap.services.uaa.credentials.client_secret}
+      access-token-uri: ${vcap.services.uaa.credentials.url}/oauth/token
+      user-authorization-uri: ${vcap.services.uaa.credentials.url}/oauth/authorize
+      scope: openid,product.read,product.write,cart.read,cart.write
+    resource:
+      user-info-uri: ${vcap.services.uaa.credentials.url}/userinfo
+      token-info-uri: ${vcap.services.uaa.credentials.url}/introspect
+      prefer-token-info: false
+hystrix:
+  shareSecurityContext: true
