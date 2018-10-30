@@ -3,9 +3,6 @@ management:
     web:
       exposure:
         include: '*'
----
-spring:
-  profiles: cloud
 databaseUrl: ${cloud.services.mysql.connection.jdbcurl:jdbc:h2:mem:test}
 products:
   a: ${PRODUCTS_A:#{null}}
