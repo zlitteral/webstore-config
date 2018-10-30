@@ -10,3 +10,7 @@ products:
   c: ${PRODUCTS_C:#{null}}
 app:
   version: cloud
+hystrix:
+  stream:
+    queue:
+      enabled: false
