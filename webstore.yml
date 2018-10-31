@@ -1,12 +1,3 @@
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-hystrix:
-  stream:
-    queue:
-      enabled: false
 webapp:
   background:
     color: blue
