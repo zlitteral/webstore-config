@@ -1,7 +1,10 @@
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 10
-    lease-expiration-duration-in-seconds: 20
+    hostname: ${vcap.application.uris[0]}
+    nonSecurePort: 80
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
   client:
-    registerWithEureka: true
-    serviceUrl: ${vcap.services.discovery.credentials.uri}/eureka/
+    serviceUrl:
+      defaultZone: ${vcap.services.discovery.credentials.uri}/eureka/
