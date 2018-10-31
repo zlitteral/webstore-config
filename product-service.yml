@@ -4,4 +4,4 @@ products:
   b: ${PRODUCTS_B:#{null}}
   c: ${PRODUCTS_C:#{null}}
 app:
-  version: cloud
+  version: updated!
