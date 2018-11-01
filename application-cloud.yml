@@ -7,3 +7,9 @@ hystrix:
   stream:
     queue:
       enabled: false
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 12000
