@@ -6,7 +6,7 @@ management:
 hystrix:
   stream:
     queue:
-      enabled: false
+      enabled: ${PIVOTAL_DASHBOARD_ENABLED:false}
   command:
     default:
       execution:
