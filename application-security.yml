@@ -9,6 +9,6 @@ security:
     resource:
       user-info-uri: ${vcap.services.uaa.credentials.url}/userinfo
       token-info-uri: ${vcap.services.uaa.credentials.url}/introspect
-      prefer-token-info: false
+      prefer-token-info: true
 hystrix:
   shareSecurityContext: true
